@@ -38,17 +38,55 @@ nav #nav-content img {
   height: 40px;
 }
 nav #nav-content .main-nav {
-  width: 758px;
+  width: 864px;
+}
+nav #nav-content .main-nav ul {
+  display: inline-flex;
+}
+nav #nav-content .main-nav ul li {
+  font-family: "微软雅黑";
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 20px;
+  height: 64px;
+  line-height: 64px;
+}
+nav #nav-content .main-nav ul li a {
+  color: #2d383f;
+  text-decoration: none;
+}
+nav #nav-content .main-nav ul li a:hover {
+  color: #004b8d;
 }
 nav #nav-content .search {
   width: 172px;
+  display: flex;
+  align-items: center;
 }
 nav #nav-content .search a {
   text-decoration: none;
   color: #004b8d;
-  font-size: 14px;
 }
 nav #nav-content .search a i {
-  padding: 20px 10px;
   font-size: 24px;
+}
+nav #nav-content .search a#search-btn {
+  width: 108px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 14px;
+  align-items: center;
+}
+nav #nav-content .search a#search-btn span {
+  height: 64px;
+  line-height: 64px;
+}
+nav #nav-content .search a#search-btn:hover {
+  background-color: #7b9baa;
+  color: white;
+}
+nav #nav-content .search a#cart i {
+  padding-left: 10px;
 }
