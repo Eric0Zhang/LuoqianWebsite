@@ -1,9 +1,11 @@
+@content-length: 1180px;
+
 #top-info {
     background-color: black;
 
     ul {
         background-color: black;
-        width: 1180px;
+        width: @content-length;
         height: 26px;
         margin: 0 auto;
         display: flex;
@@ -34,7 +36,7 @@ nav {
     border-bottom: 1px solid #eee;
 
     #nav-content {
-        width: 1180px;
+        width: @content-length;
         height: 64px;
         margin: 0 auto;
         display: flex;
@@ -50,6 +52,7 @@ nav {
             ul {
 
                 display: inline-flex;
+                // position: relative;
 
                 li {
                     font-family: "微软雅黑";
@@ -63,12 +66,42 @@ nav {
                         color: #2d383f;
                         text-decoration: none;
                     }
+                }
 
-                    a:hover {
-                        color: #004b8d;
-                    }
+                li:hover a {
+                    color: #004b8d;
+                }
+
+                li:first-child:hover~div#oem {
+                    display: block;
+                }
+
+                li:nth-child(2):hover~div#process {
+                    display: block;
+                }
+
+                div {
+                    //相对于html绝对定位
+                    position: absolute;
+                    display: none;
+                    height: 300px;
+                    width: 100%;
+                    border-top: 1px solid rgb(224, 224, 224);
+                    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+                }
+
+                div#oem {
+                    left: 0px;
+                    top: 90px;
+
+                }
+
+                div#process {
+                    left: 0px;
+                    top: 90px;
                 }
             }
+
         }
 
         .search {
