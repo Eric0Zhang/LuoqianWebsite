@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./../css/index.css">
     <link rel="stylesheet" href="./../res/font awesome/css/all.min.css">
     <link rel="shortcut icon" href="./../res/img/logo.ico" type="image/x-icon">
+    <script src="./../js/tools.js"></script>
     <script>
         // window.onload = function () {
         //     var oem = document.getElementById("oem");
@@ -34,13 +35,21 @@
             <a href="#"><img src="./../res/img/logo.png" alt="安徽络嵌"></a>
             <div class="main-nav">
                 <ul>
-                    <li><a href="#">变送器模块电路OEM</a><div class="oemsel"></div></li>
-                    <li><a href="#">工业过程测量解决方案</a><div class="prosel"></div></li>
-                    <div id="oem">
-                        
+                    <li><a href="#">变送器模块电路OEM</a>
+                        <div class="oemsel"></div>
+                    </li>
+                    <li><a href="#">工业过程测量解决方案</a>
+                        <div class="prosel"></div>
+                    </li>
+                    <div id="oem" class="outer">
+                        <div class="oem-content">
+                            OEM
+                        </div>
                     </div>
-                    <div id="process">
-                        
+                    <div id="process" class="outer">
+                        <div class="pro-content">
+                            PRO
+                        </div>
                     </div>
                 </ul>
             </div>
@@ -52,5 +61,35 @@
         </div>
     </nav>
 </body>
+<script>
+    var li1 = document.querySelector(".main-nav>ul>li:first-child");
+    var li2 = document.querySelector(".main-nav>ul>li:nth-child(2)");
+    var oem = document.getElementById('oem');
+    var pro = document.getElementById('process');
+    var timer1;
+    var timer2;
+    li1.addEventListener("mouseenter", function () {
+        timer1 = setTimeout(() => {
+            move(oem, "height", 300, 30, function () {
+                clearTimeout(timer1);
+            });
+        }, 300);
+    }, false);
+    li2.addEventListener("mouseenter", function () {
+        timer2 = setTimeout(() => {
+            move(pro, "height", 300, 30, function () {
+                clearTimeout(timer2);
+            });
+        }, 300);
+    }, false);
+    li1.addEventListener("mouseleave", function () {
+        clearTimeout(timer1);
+        move(oem, "height", 0, 30);
+    });
+    li2.addEventListener("mouseleave", function () {
+        clearTimeout(timer2);
+        move(pro, "height", 0, 30);
+    });
+</script>
 
 </html>
