@@ -184,7 +184,7 @@ nav {
     }
 }
 
-#oem-content {
+.menu-content {
     position: relative;
     justify-content: space-evenly;
 
@@ -201,7 +201,7 @@ nav {
             text-align: center;
             color: #2D383F;
             left: 0px;
-            background-color: violet;
+            background-color: white;
         }
 
         div {
@@ -212,30 +212,15 @@ nav {
         }
     }
 
-    #oem-tech {
+    >div:nth-child(2) {
         p {
             left: 215px;
-            background-color: yellow;
+            background-color: #F0F0F0;
         }
     }
 
-    // #oem-product {
-    //     background-color: transparent;
-    // }
-
-    // #oem-tech {
-    //     position: absolute;
-    //     top: 150px;
-    // }
-}
-
-#pro-content {
-    #pro-product {
-        background-color: transparent;
-    }
-
-    #pro-tech {
-        position: absolute;
-        top: 150px;
+    >div>p:hover {
+        background-color: white;
+        color: #004b8d;
     }
 }

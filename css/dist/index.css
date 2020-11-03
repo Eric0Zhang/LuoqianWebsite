@@ -140,16 +140,16 @@ nav #nav-content .search a#search-btn:hover {
 nav #nav-content .search a#cart i {
   padding-left: 10px;
 }
-#oem-content {
+.menu-content {
   position: relative;
   justify-content: space-evenly;
 }
-#oem-content > div {
+.menu-content > div {
   position: absolute;
   top: -40px;
   width: 100px;
 }
-#oem-content > div p {
+.menu-content > div p {
   position: absolute;
   height: 40px;
   width: 215px;
@@ -157,22 +157,19 @@ nav #nav-content .search a#cart i {
   text-align: center;
   color: #2D383F;
   left: 0px;
-  background-color: violet;
+  background-color: white;
 }
-#oem-content > div div {
+.menu-content > div div {
   position: absolute;
   top: 40px;
   background-color: #F7F7F7;
   display: block;
 }
-#oem-content #oem-tech p {
+.menu-content > div:nth-child(2) p {
   left: 215px;
-  background-color: yellow;
+  background-color: #F0F0F0;
 }
-#pro-content #pro-product {
-  background-color: transparent;
-}
-#pro-content #pro-tech {
-  position: absolute;
-  top: 150px;
+.menu-content > div > p:hover {
+  background-color: white;
+  color: #004b8d;
 }
