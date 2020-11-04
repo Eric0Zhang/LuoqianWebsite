@@ -12,7 +12,7 @@
         flex-direction: row-reverse;
         font-size: 14px;
 
-        li {
+        >li {
 
             height: 26px;
             line-height: 26px;
@@ -54,7 +54,7 @@ nav {
                 display: flex;
                 // position: relative;
 
-                li {
+                >li {
                     font-family: "微软雅黑";
                     font-weight: bold;
                     font-size: 14px;
@@ -94,13 +94,6 @@ nav {
                         left: 0px;
                         top: 64px;
 
-                        div {
-                            width: 1180px;
-                            height: 100%;
-                            text-align: left;
-                            margin: 0 auto;
-                        }
-
                         div.menu-top {
                             width: 100%;
                             height: 40px;
@@ -122,16 +115,16 @@ nav {
 
                 }
 
-                li:hover a {
+                >li:hover a {
                     color: #004b8d;
                 }
 
-                li:first-child:hover>div {
+                >li:first-child:hover>div {
                     width: 100%;
                     margin: 0%;
                 }
 
-                li:nth-child(2):hover>div {
+                >li:nth-child(2):hover>div {
                     width: 100%;
                     margin: 0%;
                 }
@@ -146,7 +139,7 @@ nav {
             display: flex;
             align-items: center;
 
-            a {
+            >a {
                 text-decoration: none;
                 color: #004b8d;
 
@@ -186,15 +179,21 @@ nav {
 
 .menu-content {
     position: relative;
-    justify-content: space-evenly;
+    height: 260px;
+    width: 1180px;
+    text-align: left;
+    margin: 0 auto;
 
     >div {
         position: absolute;
-        top: -40px;
-        width: 100px;
+        width: 100%;
+        height: 260px;
+        top: 0px;
+        background-color: yellow;
 
-        p {
+        >div.title {
             position: absolute;
+            top: -40px;
             height: 40px;
             width: 215px;
             line-height: 40px;
@@ -204,22 +203,29 @@ nav {
             background-color: white;
         }
 
-        div {
+        >div.list {
             position: absolute;
             top: 40px;
-            background-color: #F7F7F7;
+            width: 300px;
+            height: 100%;
+            background-color: white;
             display: block;
+
+            >div {
+                height: 40px;
+                color: black;
+            }
         }
     }
 
     >div:nth-child(2) {
-        p {
+        div.title {
             left: 215px;
             background-color: #F0F0F0;
         }
     }
 
-    >div>p:hover {
+    >div>div.title:hover {
         background-color: white;
         color: #004b8d;
     }

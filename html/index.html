@@ -32,9 +32,9 @@
                         <div id="oem" class="outer">
                             <div id="oem-top" class="menu-top"></div>
                             <div id="oem-content" class="menu-content">
-                                <div id="oem-product">  
-                                    <p>产品和服务</p>
-                                    <div>
+                                <div id="oem-product">
+                                    <div class="title">产品和服务</div>
+                                    <div class="list">
                                         <div><a href="#">温度电路</a></div>
                                         <div><a href="#">压力电路</a></div>
                                         <div><a href="#">液位电路</a></div>
@@ -42,8 +42,8 @@
                                     </div>
                                 </div>
                                 <div id="oem-tech">
-                                    <p>专业技术 & 案例分享</p>
-                                    <div>
+                                    <div class="title">专业技术 & 案例分享</div>
+                                    <div class="list">
                                         <div><a href="#">温度传感器分度表</div></a>
                                         <div><a href="#">HART通信原理</div></a>
                                         <div><a href="#">MODBUS通信协议介绍</div></a>
@@ -59,8 +59,8 @@
                             <div id="pro-top" class="menu-top"></div>
                             <div id="pro-content" class="menu-content">
                                 <div id="pro-product">
-                                    <p>测量产品方案</p>
-                                    <div>
+                                    <div class="title">测量产品方案</div>
+                                    <div class="list">
                                         <div><a href="#">温度仪表</a></div>
                                         <div><a href="#">压力仪表</a></div>
                                         <div><a href="#">液位仪表</a></div>
@@ -68,8 +68,8 @@
                                     </div>
                                 </div>
                                 <div id="pro-tech">
-                                    <p>专业技术 & 案例分享</p>
-                                    <div>
+                                    <div class="title">专业技术 & 案例分享</div>
+                                    <div class="list">
                                         <div><a href="#">工厂仪表布线规范</div></a>
                                         <div><a href="#">传感器材料与介质温度的关系</div></a>
                                         <div><a href="#">压力变送器的分类</div></a>
@@ -96,35 +96,44 @@
     var pro = document.getElementById('process');
     var timer1;
     var timer2;
-    li1.addEventListener("mouseenter", () => {
-        var cw = document.documentElement.clientWidth;
-        oem.style.width = cw + "px";
-        oem.style.width = cw + "px";
-        oem.style.left = -1 * ((cw - 1180) / 2 + 191.78) + "px";
-        timer1 = setTimeout(() => {
-            move(oem, "height", 300, 30, function () {
-                clearTimeout(timer1);
-            });
-        }, 300);
-    }, false);
-    li2.addEventListener("mouseenter", () => {
-        var cw = document.documentElement.clientWidth;
-        pro.style.width = cw + "px";
-        pro.style.left = -1 * ((cw - 1180) / 2 + 191.78 + 171.86) + "px";
-        timer2 = setTimeout(() => {
-            move(pro, "height", 300, 30, function () {
-                clearTimeout(timer2);
-            });
-        }, 300);
-    }, false);
-    li1.addEventListener("mouseleave", function () {
-        clearTimeout(timer1);
-        move(oem, "height", 0, 30);
-    });
-    li2.addEventListener("mouseleave", function () {
-        clearTimeout(timer2);
-        move(pro, "height", 0, 30);
-    });
+    var cw = document.documentElement.clientWidth;
+    oem.style.width = cw + "px";
+    oem.style.width = cw + "px";
+    oem.style.left = -1 * ((cw - 1180) / 2 + 191.78) + "px";
+    timer1 = setTimeout(() => {
+        move(oem, "height", 300, 30, function () {
+            clearTimeout(timer1);
+        });
+    }, 300);
+    // li1.addEventListener("mouseenter", () => {
+    //     var cw = document.documentElement.clientWidth;
+    //     oem.style.width = cw + "px";
+    //     oem.style.width = cw + "px";
+    //     oem.style.left = -1 * ((cw - 1180) / 2 + 191.78) + "px";
+    //     timer1 = setTimeout(() => {
+    //         move(oem, "height", 300, 30, function () {
+    //             clearTimeout(timer1);
+    //         });
+    //     }, 300);
+    // }, false);
+    // li2.addEventListener("mouseenter", () => {
+    //     var cw = document.documentElement.clientWidth;
+    //     pro.style.width = cw + "px";
+    //     pro.style.left = -1 * ((cw - 1180) / 2 + 191.78 + 171.86) + "px";
+    //     timer2 = setTimeout(() => {
+    //         move(pro, "height", 300, 30, function () {
+    //             clearTimeout(timer2);
+    //         });
+    //     }, 300);
+    // }, false);
+    // li1.addEventListener("mouseleave", function () {
+    //     clearTimeout(timer1);
+    //     move(oem, "height", 0, 30);
+    // });
+    // li2.addEventListener("mouseleave", function () {
+    //     clearTimeout(timer2);
+    //     move(pro, "height", 0, 30);
+    // });
 </script>
 
 </html>
