@@ -203,3 +203,9 @@ nav #nav-content .search a#cart i {
   background-color: white;
   color: #004b8d;
 }
+.menu-content > div:hover {
+  height: 260px;
+}
+.menu-content > div:hover > div.list {
+  height: 100%;
+}
