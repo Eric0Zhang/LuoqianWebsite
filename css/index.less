@@ -31,7 +31,7 @@
 }
 
 nav {
-    padding: 0 40px;
+    padding: 0 0px;
     background-color: white;
     border-bottom: 1px solid #eee;
 
@@ -39,10 +39,12 @@ nav {
         width: @content-length;
         height: 64px;
         margin: 0 auto;
+        width: 1180px;
         display: flex;
+        justify-content: space-between;
 
         img {
-            padding: 12px 40px;
+            padding: 12px 40px 12px 0px;
             height: 40px;
         }
 
@@ -91,7 +93,7 @@ nav {
                         // border-top: 1px solid rgb(224, 224, 224);
                         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
                         overflow: hidden;
-                        left: 0px;
+                        left: 100px;
                         top: 64px;
 
                         div.menu-top {
@@ -205,18 +207,25 @@ nav {
         }
 
         >div.list {
+            //padding-top: 40px;
             position: absolute;
             top: 0px;
-            width: 268px;
+            width: 1180px;
             height: 0px;
             background-color: white;
             font-size: 13px;
             overflow: hidden;
 
+            >div:first-child {
+                margin-top: 40px;
+            }
+
             >div {
+                //margin-top: 0px;
                 height: 40px;
                 line-height: 40px;
                 cursor: pointer;
+                position: relative;
 
                 >a {
                     color: #a2a6a8;
@@ -231,19 +240,17 @@ nav {
                         font-size: 16px;
                     }
                 }
+
+                >div.list-content {
+                    position: absolute;
+                    left: 268px;
+                    top: 0px
+                }
             }
 
             >div:hover>a {
                 color: #004b8d;
             }
-        }
-    }
-
-    >div:nth-child(1) {
-        height: 260px;
-
-        >div.list {
-            height: 100%;
         }
     }
 
@@ -259,11 +266,34 @@ nav {
         color: #004b8d;
     }
 
+    >div:nth-child(1) {
+        height: 260px;
+
+        >div.list {
+            height: 100%;
+        }
+    }
+
     >div:hover {
         height: 260px;
 
         >div.list {
             height: 100%;
+        }
+    }
+}
+
+div#pro-content {
+    >div {
+        >div.title {
+            width: 415px;
+        }
+    }
+
+    >div:nth-child(2) {
+        >div.title {
+            left: 415px;
+            background-color: #F0F0F0;
         }
     }
 }

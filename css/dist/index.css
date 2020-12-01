@@ -23,18 +23,19 @@
   color: #fff;
 }
 nav {
-  padding: 0 40px;
+  padding: 0 0px;
   background-color: white;
   border-bottom: 1px solid #eee;
 }
 nav #nav-content {
-  width: 1180px;
   height: 64px;
   margin: 0 auto;
+  width: 1180px;
   display: flex;
+  justify-content: space-between;
 }
 nav #nav-content img {
-  padding: 12px 40px;
+  padding: 12px 40px 12px 0px;
   height: 40px;
 }
 nav #nav-content .main-nav {
@@ -75,7 +76,7 @@ nav #nav-content .main-nav ul > li div.outer {
   width: 1180px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  left: 0px;
+  left: 100px;
   top: 64px;
 }
 nav #nav-content .main-nav ul > li div.outer div.menu-top {
@@ -163,16 +164,20 @@ nav #nav-content .search a#cart i {
 .menu-content > div > div.list {
   position: absolute;
   top: 0px;
-  width: 268px;
+  width: 1180px;
   height: 0px;
   background-color: white;
   font-size: 13px;
   overflow: hidden;
 }
+.menu-content > div > div.list > div:first-child {
+  margin-top: 40px;
+}
 .menu-content > div > div.list > div {
   height: 40px;
   line-height: 40px;
   cursor: pointer;
+  position: relative;
 }
 .menu-content > div > div.list > div > a {
   color: #a2a6a8;
@@ -186,14 +191,13 @@ nav #nav-content .search a#cart i {
   top: 1px;
   font-size: 16px;
 }
+.menu-content > div > div.list > div > div.list-content {
+  position: absolute;
+  left: 268px;
+  top: 0px;
+}
 .menu-content > div > div.list > div:hover > a {
   color: #004b8d;
-}
-.menu-content > div:nth-child(1) {
-  height: 260px;
-}
-.menu-content > div:nth-child(1) > div.list {
-  height: 100%;
 }
 .menu-content > div:nth-child(2) > div.title {
   left: 215px;
@@ -203,9 +207,22 @@ nav #nav-content .search a#cart i {
   background-color: white;
   color: #004b8d;
 }
+.menu-content > div:nth-child(1) {
+  height: 260px;
+}
+.menu-content > div:nth-child(1) > div.list {
+  height: 100%;
+}
 .menu-content > div:hover {
   height: 260px;
 }
 .menu-content > div:hover > div.list {
   height: 100%;
+}
+div#pro-content > div > div.title {
+  width: 415px;
+}
+div#pro-content > div:nth-child(2) > div.title {
+  left: 415px;
+  background-color: #F0F0F0;
 }
