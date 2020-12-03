@@ -177,7 +177,6 @@ nav #nav-content .search a#cart i {
   height: 40px;
   line-height: 40px;
   cursor: pointer;
-  position: relative;
 }
 .menu-content > div > div.list > div > a {
   color: #a2a6a8;
@@ -194,7 +193,25 @@ nav #nav-content .search a#cart i {
 .menu-content > div > div.list > div > div.list-content {
   position: absolute;
   left: 268px;
+  height: 260px;
   top: 0px;
+  width: 912px;
+  background-color: #F7F7F7;
+}
+.menu-content > div > div.list > div:nth-child(1) > a {
+  color: #004b8d;
+}
+.menu-content > div > div.list > div:nth-child(1) > div.list-content {
+  display: block;
+}
+.menu-content > div > div.list > div:nth-child(2) > div.list-content {
+  display: none;
+}
+.menu-content > div > div.list > div:nth-child(3) > div.list-content {
+  display: none;
+}
+.menu-content > div > div.list > div:nth-child(4) > div.list-content {
+  display: none;
 }
 .menu-content > div > div.list > div:hover > a {
   color: #004b8d;

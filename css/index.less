@@ -225,7 +225,7 @@ nav {
                 height: 40px;
                 line-height: 40px;
                 cursor: pointer;
-                position: relative;
+                //position: relative;
 
                 >a {
                     color: #a2a6a8;
@@ -244,7 +244,45 @@ nav {
                 >div.list-content {
                     position: absolute;
                     left: 268px;
-                    top: 0px
+                    height: 260px;
+                    top: 0px;
+                    width: 912px;
+                    background-color: #F7F7F7;
+                    // display: flex;
+                    // justify-content: space-evenly;
+
+                    // >div {
+                    //     flex: auto;
+                    // }
+                }
+
+            }
+
+            >div:nth-child(1) {
+                >a {
+                    color: #004b8d;
+                }
+
+                >div.list-content {
+                    display: block;
+                }
+            }
+
+            >div:nth-child(2) {
+                >div.list-content {
+                    display: none;
+                }
+            }
+
+            >div:nth-child(3) {
+                >div.list-content {
+                    display: none;
+                }
+            }
+
+            >div:nth-child(4) {
+                >div.list-content {
+                    display: none;
                 }
             }
 
