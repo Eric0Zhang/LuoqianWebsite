@@ -248,12 +248,26 @@ nav {
                     top: 0px;
                     width: 912px;
                     background-color: #F7F7F7;
-                    // display: flex;
-                    // justify-content: space-evenly;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    align-content: space-evenly;
 
-                    // >div {
-                    //     flex: auto;
-                    // }
+                    >div {
+                        flex: content;
+                        margin-left: 20px;
+                        margin-right: 20px;
+
+                        a {
+                            text-decoration: none;
+                            color: #a2a6a8;
+                        }
+
+                        a:hover {
+                            color: #004b8d;
+                        }
+                    }
                 }
 
             }
@@ -264,7 +278,7 @@ nav {
                 }
 
                 >div.list-content {
-                    display: block;
+                    display: flex;
                 }
             }
 

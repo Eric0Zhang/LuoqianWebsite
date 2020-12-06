@@ -197,12 +197,29 @@ nav #nav-content .search a#cart i {
   top: 0px;
   width: 912px;
   background-color: #F7F7F7;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: space-evenly;
+}
+.menu-content > div > div.list > div > div.list-content > div {
+  flex: content;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.menu-content > div > div.list > div > div.list-content > div a {
+  text-decoration: none;
+  color: #a2a6a8;
+}
+.menu-content > div > div.list > div > div.list-content > div a:hover {
+  color: #004b8d;
 }
 .menu-content > div > div.list > div:nth-child(1) > a {
   color: #004b8d;
 }
 .menu-content > div > div.list > div:nth-child(1) > div.list-content {
-  display: block;
+  display: flex;
 }
 .menu-content > div > div.list > div:nth-child(2) > div.list-content {
   display: none;
