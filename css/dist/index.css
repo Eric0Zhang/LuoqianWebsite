@@ -178,13 +178,13 @@ nav #nav-content .search a#cart i {
   line-height: 40px;
   cursor: pointer;
 }
-.menu-content > div > div.list > div > a {
+.menu-content > div > div.list > div a {
   color: #a2a6a8;
   text-decoration: none;
   padding-left: 10px;
   position: relative;
 }
-.menu-content > div > div.list > div > a > i {
+.menu-content > div > div.list > div a > i {
   position: absolute;
   left: 250px;
   top: 1px;
@@ -215,7 +215,7 @@ nav #nav-content .search a#cart i {
 .menu-content > div > div.list > div > div.list-content > div a:hover {
   color: #004b8d;
 }
-.menu-content > div > div.list > div:nth-child(1) > a {
+.menu-content > div > div.list > div:nth-child(1) > div.serie-name > a {
   color: #004b8d;
 }
 .menu-content > div > div.list > div:nth-child(1) > div.list-content {
@@ -230,7 +230,7 @@ nav #nav-content .search a#cart i {
 .menu-content > div > div.list > div:nth-child(4) > div.list-content {
   display: none;
 }
-.menu-content > div > div.list > div:hover > a {
+.menu-content > div > div.list > div:hover a {
   color: #004b8d;
 }
 .menu-content > div:nth-child(2) > div.title {
@@ -259,4 +259,41 @@ div#pro-content > div > div.title {
 div#pro-content > div:nth-child(2) > div.title {
   left: 415px;
   background-color: #F0F0F0;
+}
+main #banner {
+  height: 512px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+main #banner #banner-left {
+  width: 50%;
+  height: 1512px;
+  flex: auto;
+  transform: translateY(-500px) rotateZ(20deg) translateX(-10px);
+  background-color: wheat;
+  overflow: hidden;
+  z-index: 1;
+}
+main #banner #banner-left div {
+  width: 1000px;
+  height: 512px;
+  background-color: red;
+  z-index: 9992;
+  transform: rotateZ(-20deg) translateX(-200px) translateY(425px);
+  background-image: url(../res/img/banner-oem.jpg);
+  background-size: cover;
+}
+main #banner #seperator {
+  background-color: white;
+  height: 612px;
+  width: 20px;
+  z-index: 1;
+  transform: translateY(-50px) rotateZ(20deg);
+}
+main #banner #banner-right {
+  flex: auto;
+  background-color: yellowgreen;
+  background-size: cover;
+  background-position: -500px 0;
 }

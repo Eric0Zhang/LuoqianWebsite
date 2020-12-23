@@ -227,7 +227,7 @@ nav {
                 cursor: pointer;
                 //position: relative;
 
-                >a {
+                a {
                     color: #a2a6a8;
                     text-decoration: none;
                     padding-left: 10px;
@@ -273,8 +273,10 @@ nav {
             }
 
             >div:nth-child(1) {
-                >a {
-                    color: #004b8d;
+                >div.serie-name {
+                    >a {
+                        color: #004b8d;
+                    }
                 }
 
                 >div.list-content {
@@ -300,7 +302,7 @@ nav {
                 }
             }
 
-            >div:hover>a {
+            >div:hover a {
                 color: #004b8d;
             }
         }
@@ -347,5 +349,54 @@ div#pro-content {
             left: 415px;
             background-color: #F0F0F0;
         }
+    }
+}
+
+main {
+    #banner {
+        height: 512px;
+        width: 100%;
+        //background-color: turquoise;
+        display: flex;
+        overflow: hidden;
+
+        #banner-left {
+            width: 50%;
+            height: 1512px;
+            flex: auto;
+            transform: translateY(-500px) rotateZ(20deg) translateX(-10px);
+            background-color: wheat;
+            overflow: hidden;
+            z-index: 1;
+
+            div {
+                width: 1000px;
+                height: 512px;
+                background-color: red;
+                z-index: 9992;
+                transform: rotateZ(-20deg) translateX(-200px) translateY(425px);
+                background-image: url(./../res/img/banner-oem.jpg);
+                background-size: cover;
+                //background-position: 200px 1500px;
+            }
+
+        }
+
+        #seperator {
+            background-color: white;
+            height: 612px;
+            width: 20px;
+            z-index: 1;
+            transform: translateY(-50px) rotateZ(20deg);
+        }
+
+        #banner-right {
+            flex: auto;
+            background-color: yellowgreen;
+            //background-image: url(./../res/img/banner-pro.jpg);
+            background-size: cover;
+            background-position: -500px 0;
+        }
+
     }
 }
