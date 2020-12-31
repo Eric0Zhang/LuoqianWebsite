@@ -4,9 +4,13 @@ var oem = document.getElementById('oem');
 var pro = document.getElementById('process');
 var timer1;
 var timer2;
+var timer3;
 var titles = document.getElementsByClassName("title");
 var proLists = document.getElementsByClassName("product-list");
-//TEST START
+var bannerl = document.getElementById("banner-left");
+var bannerr = document.getElementById("banner-right");
+var seperator = document.getElementById("seperator");
+//TEST NAV START
 // var cw = document.documentElement.clientWidth;
 // oem.style.width = cw + "px";
 // oem.style.width = cw + "px";
@@ -18,7 +22,7 @@ var proLists = document.getElementsByClassName("product-list");
 // }, 300);
 //TEST END
 
-// FORMAL CODE
+// FORMAL NAV CODE
 li1.addEventListener("mouseenter", () => {
     titles[0].style.backgroundColor = "white";
     titles[0].style.color = "#004B8D";
@@ -56,6 +60,7 @@ li2.addEventListener("mouseleave", function () {
     clearTimeout(timer2);
     move(pro, "height", 0, 30);
 });
+//FORMAL NAV END
 
 for (let i = 0; i < 4; i++) {
     titles[i].addEventListener("mouseenter", function () {
@@ -84,17 +89,14 @@ for (let i = 0; i < 4; i++) {
 }
 
 //注意这里proLists不是一个数组, 而是一个类, 原型是HTMLCollection
-//proLists.forEach(list => {
 for (let i = 0; i < proLists.length; i++) {
     let series = proLists[i].getElementsByClassName('series');
-    //series.forEach(serie => {
     for (let j = 0; j < series.length; j++) {
         //一个类别下的一个标题和一个列表内容块
         let title = series[j].getElementsByClassName('serie-name');
         let content = series[j].getElementsByClassName('list-content');
         title[0].addEventListener("mouseenter", function () {
             //把所有的标题变灰,内容块隐藏
-            //series.forEach(sub => {
             for (let k = 0; k < series.length; k++) {
                 let st = series[k].getElementsByClassName('serie-name');
                 st[0].childNodes[0].style.color = "#a2a6a8";
@@ -108,3 +110,42 @@ for (let i = 0; i < proLists.length; i++) {
 
     };
 };
+
+bannerl.addEventListener("mouseenter", () => {
+    let clientW = document.documentElement.clientWidth;
+    timer3 = setTimeout(() => {
+        move(bannerl, "width", 0.75*clientW, 30, function () {
+            clearTimeout(timer3);
+        });
+        move(seperator, "left", 0.75*clientW, 30, function () {
+            clearTimeout(timer3);
+        });
+    }, 300);
+}, false);
+
+bannerl.addEventListener("mouseleave", function () {
+    let clientW = document.documentElement.clientWidth;
+    clearTimeout(timer3);
+    move(bannerl, "width", 0.555 * clientW, 30);
+    move(seperator, "left", 0.555 * clientW, 30);
+});
+
+bannerr.addEventListener("mouseenter", () => {
+    let clientW = document.documentElement.clientWidth;
+    timer4 = setTimeout(() => {
+        move(bannerl, "width", 0.35*clientW, 30, function () {
+            clearTimeout(timer4);
+        });
+        move(seperator, "left", 0.35*clientW, 30, function () {
+            clearTimeout(timer4);
+        });
+    }, 300);
+}, false);
+
+bannerr.addEventListener("mouseleave", function () {
+    let clientW = document.documentElement.clientWidth;
+    clearTimeout(timer4);
+    move(bannerl, "width", 0.555 * clientW, 30);
+    move(seperator, "left", 0.555 * clientW, 30);
+});
+

@@ -6,8 +6,12 @@ var oem = document.getElementById('oem');
 var pro = document.getElementById('process');
 var timer1;
 var timer2;
+var timer3;
 var titles = document.getElementsByClassName("title");
-var proLists = document.getElementsByClassName("product-list"); //TEST START
+var proLists = document.getElementsByClassName("product-list");
+var bannerl = document.getElementById("banner-left");
+var bannerr = document.getElementById("banner-right");
+var seperator = document.getElementById("seperator"); //TEST NAV START
 // var cw = document.documentElement.clientWidth;
 // oem.style.width = cw + "px";
 // oem.style.width = cw + "px";
@@ -18,7 +22,7 @@ var proLists = document.getElementsByClassName("product-list"); //TEST START
 //     });
 // }, 300);
 //TEST END
-// FORMAL CODE
+// FORMAL NAV CODE
 
 li1.addEventListener("mouseenter", function () {
   titles[0].style.backgroundColor = "white";
@@ -56,7 +60,7 @@ li1.addEventListener("mouseleave", function () {
 li2.addEventListener("mouseleave", function () {
   clearTimeout(timer2);
   move(pro, "height", 0, 30);
-});
+}); //FORMAL NAV END
 
 var _loop = function _loop(i) {
   titles[i].addEventListener("mouseenter", function () {
@@ -93,12 +97,10 @@ var _loop2 = function _loop2(_i) {
 for (var _i = 0; _i < 4; _i++) {
   _loop2(_i);
 } //注意这里proLists不是一个数组, 而是一个类, 原型是HTMLCollection
-//proLists.forEach(list => {
 
 
 var _loop3 = function _loop3(_i2) {
-  var series = proLists[_i2].getElementsByClassName('series'); //series.forEach(serie => {
-
+  var series = proLists[_i2].getElementsByClassName('series');
 
   var _loop4 = function _loop4(j) {
     //一个类别下的一个标题和一个列表内容块
@@ -106,7 +108,6 @@ var _loop3 = function _loop3(_i2) {
     var content = series[j].getElementsByClassName('list-content');
     title[0].addEventListener("mouseenter", function () {
       //把所有的标题变灰,内容块隐藏
-      //series.forEach(sub => {
       for (var k = 0; k < series.length; k++) {
         var st = series[k].getElementsByClassName('serie-name');
         st[0].childNodes[0].style.color = "#a2a6a8";
@@ -133,3 +134,37 @@ for (var _i2 = 0; _i2 < proLists.length; _i2++) {
 }
 
 ;
+bannerl.addEventListener("mouseenter", function () {
+  var clientW = document.documentElement.clientWidth;
+  timer3 = setTimeout(function () {
+    move(bannerl, "width", 0.75 * clientW, 30, function () {
+      clearTimeout(timer3);
+    });
+    move(seperator, "left", 0.75 * clientW, 30, function () {
+      clearTimeout(timer3);
+    });
+  }, 300);
+}, false);
+bannerl.addEventListener("mouseleave", function () {
+  var clientW = document.documentElement.clientWidth;
+  clearTimeout(timer3);
+  move(bannerl, "width", 0.555 * clientW, 30);
+  move(seperator, "left", 0.555 * clientW, 30);
+});
+bannerr.addEventListener("mouseenter", function () {
+  var clientW = document.documentElement.clientWidth;
+  timer4 = setTimeout(function () {
+    move(bannerl, "width", 0.35 * clientW, 30, function () {
+      clearTimeout(timer4);
+    });
+    move(seperator, "left", 0.35 * clientW, 30, function () {
+      clearTimeout(timer4);
+    });
+  }, 300);
+}, false);
+bannerr.addEventListener("mouseleave", function () {
+  var clientW = document.documentElement.clientWidth;
+  clearTimeout(timer4);
+  move(bannerl, "width", 0.555 * clientW, 30);
+  move(seperator, "left", 0.555 * clientW, 30);
+});
