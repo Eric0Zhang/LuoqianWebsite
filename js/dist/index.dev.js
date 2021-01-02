@@ -140,7 +140,7 @@ bannerl.addEventListener("mouseenter", function () {
     move(bannerl, "width", 0.75 * clientW, 30, function () {
       clearTimeout(timer3);
     });
-    move(seperator, "left", 0.75 * clientW, 30, function () {
+    move(seperator, "left", 0.693 * clientW, 30, function () {
       clearTimeout(timer3);
     });
   }, 300);
@@ -149,7 +149,7 @@ bannerl.addEventListener("mouseleave", function () {
   var clientW = document.documentElement.clientWidth;
   clearTimeout(timer3);
   move(bannerl, "width", 0.555 * clientW, 30);
-  move(seperator, "left", 0.555 * clientW, 30);
+  move(seperator, "left", 0.498 * clientW, 30);
 });
 bannerr.addEventListener("mouseenter", function () {
   var clientW = document.documentElement.clientWidth;
@@ -157,7 +157,7 @@ bannerr.addEventListener("mouseenter", function () {
     move(bannerl, "width", 0.35 * clientW, 30, function () {
       clearTimeout(timer4);
     });
-    move(seperator, "left", 0.35 * clientW, 30, function () {
+    move(seperator, "left", 0.293 * clientW, 30, function () {
       clearTimeout(timer4);
     });
   }, 300);
@@ -166,5 +166,5 @@ bannerr.addEventListener("mouseleave", function () {
   var clientW = document.documentElement.clientWidth;
   clearTimeout(timer4);
   move(bannerl, "width", 0.555 * clientW, 30);
-  move(seperator, "left", 0.555 * clientW, 30);
+  move(seperator, "left", 0.498 * clientW, 30);
 });
