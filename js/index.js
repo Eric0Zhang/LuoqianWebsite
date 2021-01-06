@@ -149,3 +149,46 @@ bannerr.addEventListener("mouseleave", function () {
     move(seperator, "left", 0.498 * clientW, 30);
 });
 
+var caro_ulw = document.getElementById("carousel-ulwrapper");
+var timer5;
+var timer6;
+
+var caroleft = document.getElementById("carousel-arrowleft");
+caroleft.onclick = function () {
+    let lc = parseInt(getStyle(caro_ulw, "left"));
+    let lt;
+    if (lc == 0)
+        lt = -1180;
+    else if (lc == -1180)
+        lt = -2360;
+    else if (lc == -2360) { 
+        caro_ulw.style.left = 0 + "px";
+        lt = -1180;
+    }
+    timer5 = setTimeout(() => {
+        move(caro_ulw, "left", lt, 60, function () {
+            clearTimeout(timer5);
+        });
+    }, 0);
+};
+
+var caroright = document.getElementById("carousel-arrowright");
+caroright.onclick = function () {
+    let lc = parseInt(getStyle(caro_ulw, "left"));
+    let lt;
+    if (lc == 0) {
+        caro_ulw.style.left = -2360 + "px";
+        lt = -1180;
+    }
+    else if (lc == -1180)
+        lt = 0;
+    else if (lc == -2360) {     
+        lt = -1180;
+    }
+    timer5 = setTimeout(() => {
+        move(caro_ulw, "left", lt, 60, function () {
+            clearTimeout(timer5);
+        });
+    }, 0);
+};
+

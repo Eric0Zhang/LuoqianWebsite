@@ -1,3 +1,6 @@
+html {
+  color: #333333;
+}
 #top-info {
   background-color: black;
 }
@@ -270,7 +273,7 @@ main #banner #banner-left {
   position: absolute;
   width: 55.5%;
   height: 512px;
-  left: -100px;
+  left: -5.5%;
   transform: skew(-20deg);
   overflow: hidden;
   z-index: 5;
@@ -283,7 +286,7 @@ main #banner #banner-left div {
   transform: skew(20deg);
   background-image: url(../res/img/banner-oem.jpg);
   background-size: cover;
-  background-position: -50px 0px;
+  background-position: -5% 0px;
   filter: brightness(75%);
 }
 main #banner #banner-left div a {
@@ -296,7 +299,7 @@ main #banner #banner-left div:hover {
 }
 main #banner #seperator {
   position: absolute;
-  left: 49.8%;
+  left: 50%;
   background-color: #ffffff;
   height: 512px;
   width: 0.5%;
@@ -314,7 +317,7 @@ main #banner #banner-right {
 }
 main #banner #banner-right div {
   position: absolute;
-  left: -90px;
+  left: -5%;
   width: 1600px;
   height: 512px;
   z-index: 9992;
@@ -343,6 +346,7 @@ main #carousel {
   position: relative;
   width: 1180px;
   margin: 0 auto;
+  padding-bottom: 25px;
 }
 main #carousel #carousel-title {
   width: 1180px;
@@ -372,66 +376,91 @@ main #carousel #carousel-content #carousel-main {
   height: 346px;
   margin: 0 auto;
   overflow: hidden;
+  position: relative;
 }
-main #carousel #carousel-content #carousel-main ul {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper {
   width: 4800px;
+  height: 100%;
+  position: absolute;
+  left: -1180px;
+}
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul {
+  width: 100%;
   height: 100%;
   display: flex;
 }
-main #carousel #carousel-content #carousel-main ul li.solution {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li.solution {
   margin-right: 20px;
   flex: content;
   width: 280px;
   height: 100%;
 }
-main #carousel #carousel-content #carousel-main ul li.solution div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li.solution div.item-pic {
   width: 100%;
   height: 210px;
 }
-main #carousel #carousel-content #carousel-main ul li.solution div.item-pic a {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li.solution div.item-pic a {
   display: block;
   width: 100%;
   height: 100%;
 }
-main #carousel #carousel-content #carousel-main ul li.solution div.item-title {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li.solution div.item-title {
   width: 100%;
   height: 28px;
   margin: 15px 0;
   font-size: 20px;
   color: #333333;
 }
-main #carousel #carousel-content #carousel-main ul li.solution div.item-content {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li.solution div.item-content {
   width: 100%;
   height: 52px;
   font-size: 16px;
   color: #333333;
 }
-main #carousel #carousel-content #carousel-main ul li.solution div.item-end a {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li.solution div.item-end a {
   color: #004b8d;
   text-decoration: none;
 }
-main #carousel #carousel-content #carousel-main ul li:nth-child(1) div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(4) {
+  margin-right: 0px;
+}
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(8) {
+  margin-right: 0px;
+}
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(1) div.item-pic {
   background-image: url('../res/img/logo.png');
 }
-main #carousel #carousel-content #carousel-main ul li:nth-child(2) div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(2) div.item-pic {
   background-image: url('../res/img/logo.png');
 }
-main #carousel #carousel-content #carousel-main ul li:nth-child(3) div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(3) div.item-pic {
   background-image: url('../res/img/logo.png');
 }
-main #carousel #carousel-content #carousel-main ul li:nth-child(4) div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(4) div.item-pic {
   background-image: url('../res/img/logo.png');
 }
-main #carousel #carousel-content #carousel-main ul li:nth-child(5) div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(5) div.item-pic {
+  background-image: url('../res/img/LQT202.ico');
+}
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(6) div.item-pic {
+  background-image: url('../res/img/LQT202.ico');
+}
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(7) div.item-pic {
+  background-image: url('../res/img/LQT202.ico');
+}
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(8) div.item-pic {
+  background-image: url('../res/img/LQT202.ico');
+}
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(9) div.item-pic {
   background-image: url('../res/img/logo.png');
 }
-main #carousel #carousel-content #carousel-main ul li:nth-child(6) div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(10) div.item-pic {
   background-image: url('../res/img/logo.png');
 }
-main #carousel #carousel-content #carousel-main ul li:nth-child(7) div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(11) div.item-pic {
   background-image: url('../res/img/logo.png');
 }
-main #carousel #carousel-content #carousel-main ul li:nth-child(8) div.item-pic {
+main #carousel #carousel-content #carousel-main #carousel-ulwrapper ul li:nth-child(12) div.item-pic {
   background-image: url('../res/img/logo.png');
 }
 main #carousel #carousel-content #carousel-arrowright {
@@ -440,16 +469,113 @@ main #carousel #carousel-content #carousel-arrowright {
   top: 43%;
   right: -50px;
 }
+main #carousel #carousel-content #carousel-arrowleft:active {
+  left: -53px;
+}
+main #carousel #carousel-content #carousel-arrowright:active {
+  right: -53px;
+}
 main #carousel #carousel-end {
-  width: 280px;
-  height: 50px;
   margin: 0 auto;
   margin-top: 20px;
+}
+main .society {
+  width: 1180px;
+  height: 250px;
+  margin: 25px auto;
+  background-image: url(../res/img/society.png);
+}
+main .society h2 {
+  font-size: 40px;
+  color: white;
+  padding-top: 30px;
+  margin-left: 40px;
+}
+main .society p {
+  width: 500px;
+  height: 180px;
+  color: white;
+  margin-left: 40px;
+  padding-top: 30px;
+  line-height: 30px;
+}
+main .society .society-btn {
+  margin: -160px 100px 100px 800px;
+}
+main #genius {
+  width: 1180px;
+  height: 757px;
+  margin: 0 auto;
+}
+main #genius #tech {
+  margin-top: 60px;
+  float: left;
+  width: 440px;
+  height: 460px;
+  background-image: url(../res/img/tech.png);
+  background-repeat: no-repeat;
+}
+main #genius #tech #tech-inner {
+  margin-top: 222px;
+  margin-left: 60px;
+  width: 400px;
+  height: 239px;
+  background-color: white;
+}
+main #genius #tech #tech-inner h2 {
+  font-size: 30px;
+  padding-top: 20px;
+  margin-left: 30px;
+}
+main #genius #tech #tech-inner p {
+  width: 260px;
+  margin-left: 30px;
+  padding-top: 10px;
+  line-height: 20px;
+}
+main #genius #tech #tech-inner #tech-btn {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 260px;
+}
+main #genius #recruit {
+  width: 560px;
+  height: 657px;
+  padding: 50px 70px;
+  background-color: #F0F0F0;
+  float: right;
+}
+main #genius #recruit img {
+  width: 560px;
+  height: 420px;
+}
+main #genius #recruit h2 {
+  font-size: 36px;
+  padding-top: 30px;
+  margin-left: 30px;
+}
+main #genius #recruit p {
+  width: 500px;
+  height: 180px;
+  margin-left: 30px;
+  padding-top: 30px;
+  line-height: 30px;
+}
+main #genius #recruit #rec-btn {
+  margin-top: -80px;
+  margin-left: 30px;
+}
+main .help-others {
+  background-image: url(../res/img/help.png);
+}
+.button {
+  width: 280px;
+  height: 50px;
   background-color: #004b8d;
   text-align: center;
   line-height: 50px;
 }
-main #carousel #carousel-end a {
+.button a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -457,15 +583,15 @@ main #carousel #carousel-end a {
   width: 100%;
   height: 100%;
 }
-main #carousel #carousel-end a i {
+.button a i {
   position: absolute;
   left: 200px;
   color: white;
   top: 33%;
 }
-main #carousel #carousel-end:hover {
-  background-color: #023f75;
+.button:hover {
+  background-color: #003a6d;
 }
-main #carousel #carousel-end:hover i {
+.button:hover i {
   padding-left: 3px;
 }
