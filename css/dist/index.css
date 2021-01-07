@@ -1,5 +1,39 @@
+/* 高度塌陷 打开BFC */
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
 html {
   color: #333333;
+}
+.button {
+  width: 280px;
+  height: 50px;
+  background-color: #004b8d;
+  text-align: center;
+  line-height: 50px;
+}
+.button a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.button a i {
+  position: absolute;
+  left: 200px;
+  color: white;
+  top: 34.5%;
+}
+.button:hover {
+  background-color: #005197;
+}
+.button:hover i {
+  padding-left: 3px;
 }
 #top-info {
   background-color: black;
@@ -568,30 +602,89 @@ main #genius #recruit #rec-btn {
 main .help-others {
   background-image: url(../res/img/help.png);
 }
-.button {
-  width: 280px;
-  height: 50px;
-  background-color: #004b8d;
-  text-align: center;
-  line-height: 50px;
-}
-.button a {
-  position: relative;
-  display: block;
-  text-decoration: none;
-  color: white;
+main #news {
   width: 100%;
-  height: 100%;
+  background-image: url(../res/img/world.png);
+  background-size: contain;
 }
-.button a i {
-  position: absolute;
-  left: 200px;
-  color: white;
-  top: 33%;
+main #news #news-wrapper {
+  width: 1180px;
+  margin: 0 auto;
 }
-.button:hover {
-  background-color: #003a6d;
+main #news #news-wrapper a {
+  text-decoration: none;
+  color: #333333;
 }
-.button:hover i {
-  padding-left: 3px;
+main #news #news-wrapper h2 {
+  font-size: 36px;
+}
+main #news #news-wrapper div.news-btn {
+  background-color: transparent;
+  margin-left: 960px;
+  margin-top: -40px;
+}
+main #news #news-wrapper div.news-btn a {
+  color: #004b8d;
+  font-weight: bold;
+}
+main #news #news-wrapper div.news-btn i {
+  color: #004b8d;
+}
+main #news #news-wrapper .article-container {
+  width: 280px;
+  height: 400px;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 1px 1px rgba(202, 202, 202, 0.6);
+  float: left;
+  margin-right: 20px;
+}
+main #news #news-wrapper .article-container h3 {
+  font-size: 12px;
+  margin: 0 0 0 18px;
+  padding: 15px 18px 6px 0;
+  color: #737373;
+  border-bottom: solid 1px #dad9d9;
+}
+main #news #news-wrapper .article-container .content {
+  width: 244px;
+  height: 295px;
+  font-size: 16px;
+  padding: 20px 18px 0;
+}
+main #news #news-wrapper .article-container .content .p1 {
+  padding-top: 15px;
+  line-height: 1.625em;
+}
+main #news #news-wrapper .article-container .bottom {
+  width: 244px;
+  height: 12px;
+  padding: 18px;
+}
+main #news #news-wrapper .article-container .bottom .date {
+  font-size: 12px;
+  float: left;
+}
+main #news #news-wrapper .article-container .bottom .read-more {
+  color: #004b8d;
+  float: right;
+}
+main #news #news-wrapper .article-container:last-child {
+  margin-right: 0px;
+  overflow: hidden;
+}
+main #news #news-wrapper .article-container:last-child div.p1 {
+  padding: 15px 20px 0px 20px;
+  font-size: 12px;
+  line-height: 1.1em;
+}
+main #news #news-wrapper .article-container:last-child div.bottom {
+  padding: 0px 0 10px;
+  margin: 10px 20px;
+  float: left;
+  border-bottom: solid 1px #dad9d9;
+}
+main #news #news-wrapper .article-container:last-child div.bottom a {
+  float: left;
+  padding-left: 0px;
 }
