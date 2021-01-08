@@ -688,3 +688,50 @@ main #news #news-wrapper .article-container:last-child div.bottom a {
   float: left;
   padding-left: 0px;
 }
+footer {
+  width: 100%;
+}
+footer nav {
+  background-color: #101010;
+}
+footer nav div {
+  width: 1180px;
+  margin: 30px auto;
+}
+footer nav div ul.horizontal-list li {
+  float: left;
+  margin: 30px 20px 0px 0px;
+}
+footer nav div ul.horizontal-list li a {
+  text-decoration: none;
+  color: white;
+}
+footer nav div ul.horizontal-list li.bar {
+  margin-top: 33px;
+  width: 1px;
+  height: 12px;
+  background-color: white;
+}
+footer nav div ul.horizontal-list li:first-child {
+  font-size: 12px;
+  color: #909090;
+}
+footer div.page-end {
+  height: 80px;
+  background-color: #000000;
+}
+footer div.page-end div {
+  width: 1180px;
+  margin: 0 auto;
+}
+footer div.page-end div p {
+  color: #909090;
+  font-size: 13px;
+  line-height: 80px;
+}
+footer div.page-end div a i {
+  float: right;
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: -50px;
+}
